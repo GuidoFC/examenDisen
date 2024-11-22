@@ -1,0 +1,18 @@
+services:
+  
+  examensccs:
+    build:
+      context: .
+      dockerfile: vite\Dockerfile
+    tty: true
+    stdin_open: true
+    volumes:
+      # primero creamos el contenedor asi
+      - .\vite:/app
+      # después de ejecutar el comando npm run dev volvemos a levantar el contendor usando este volumnen
+      #- .\vite\vite-project:/app
+    
+    # para Vite es importante poner un puerto
+    ports:
+      - "2520:8888"
+      - "8780:5173"
