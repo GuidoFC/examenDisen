@@ -1,0 +1,79 @@
+
+
+@keyframes salir {
+    0% {
+        bottom: -80px; /* Mario empieza dentro del tubo */
+    }
+    30% {
+        bottom: 0; /* Mario sale del tubo */
+
+    }
+}
+
+/*Quiero saber en cuanto lo tengo que dividir, en este caso en 12. pq en una fila hay 12 marios y de ancho 835 px -> 69,9px*/
+/*en una columna hay 8 marios y 639px de altura  -> 79.8*/
+
+@keyframes correr {
+    /* Explicacion de como aplicar el correr*/
+    /*https://www.youtube.com/watch?v=cwwGPHE4Ax0*/
+    40% {
+        object-position: 0px px;
+    }
+    50% {
+        object-position: -139.8px 0px;
+    }
+    100% {
+        object-position: 0px 0px;
+    }
+}
+
+
+
+
+#tuberia{
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
+}
+
+#container{
+    /*Quiero saber en cuanto lo tengo que dividir, en este caso en 12. pq en una fila hay 12 marios y de ancho 835 px -> 69,9px*/
+    /*en una columna hay 8 marios y 639px de altura  -> 79.8*/
+    /*Esta es la razon por que el widh y height tienen esa dimensión*/
+    position: absolute;
+    bottom: 200px;
+    left: 80px;
+    width: 70px;
+    height: 80px;
+    object-fit: none;
+}
+
+#container img {
+    z-index: 0;
+    position: relative;
+    /*Quiero saber en cuanto lo tengo que dividir, en este caso en 12. pq en una fila hay 12 marios y de ancho 835 px -> 69,9px*/
+    /*en una columna hay 8 marios y 639px de altura  -> 79.8*/
+    /*Esta es la razon por que el widh y height tienen esa dimensión*/
+    width: 70px;
+    height: 80px;
+    object-fit: none;
+    object-position: 0 0;
+
+    /* Quiero estar en la misma fila por esto tengo 0px
+     pero quiero moverme en columna multiplico 2* 69,9px y obtengo -139.8px*/
+    /*object-position: -139.8px 0px;*/
+    /*Para poner mas de una aniacion separarlo con comas*/
+    /*forwards: Significa que cuando la animación termine, el elemento mantendrá el último estado definido en la animación.*/
+
+
+
+    animation: salir 3s ease forwards, correr 0.5s steps(2)  infinite;
+    /*0s: Define que la animación salir comenzará inmediatamente, sin ningún retraso*/
+    /*2s: Define que la animación correr comenzará después de un retraso de 1 segundos.*/
+    animation-delay: 0s,1s;
+
+    /*    Resumne: La primera animación (salir) comienza inmediatamente y dura 3 segundos con una transición suave, y el elemento mantiene el último estado de la animación.
+    La segunda animación (correr) comienza 1 segundos después de que se cargue el elemento, se ejecuta en 0.5 segundos en dos pasos, y se repite infinitamente.*/
+
+}
