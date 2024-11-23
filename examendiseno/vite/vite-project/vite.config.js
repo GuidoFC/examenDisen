@@ -2,7 +2,7 @@
 export default {
     // config options
     base: "",
-    root: "./Kittens/", // especificamos la carpeta donde esta nuestro index.html
+    root: "./Mario/sprites/", // especificamos la carpeta donde esta nuestro index.html
 
     server: {
         port: 8888,
