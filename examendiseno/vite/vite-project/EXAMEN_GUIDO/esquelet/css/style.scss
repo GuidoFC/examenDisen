@@ -1,159 +1,244 @@
-.wrapper{
+// Maquetacion para movil
+$colorCasilla: #7d7d6c;
+.wrapper {
+  .a, .c, .b{
+    color: white;
+    padding: 10px;
+  }
+}
 
+.wrapper {
+  .e, .f, .l, .m{
+    color: #7d7d6c;
+  }
+}
+
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 10px;
+
+  .a {
+    background-color: $colorCasilla;
+  }
+
+  .c {
+    background-color: $colorCasilla;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .d {
+    background-color: $colorCasilla;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+
+    >div{
+      background-color: #c8c8c8;
+      text-align: center;
+      width: 40%;
+    }
+    .g, .h, .i, .k, .j{
+      z-index: -3;
+      position: absolute;
+      top: 0;
+      background-color: #414141;
+    }
+
+  }
+
+  .b{
+    background-color: $colorCasilla;
+  }
+  .n{
+    background-color: $colorCasilla;
+    padding: 10px;
+    form{
+      padding: 10px;
+      background-color: #c8c8c8;
+      color: white;
+      ul{
+
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        li{
+          gap: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        button{
+          background-color: #7d7d7d;
+          color: white;
+        }
+      }
+    }
+
+  }
 }
 
 // ahora lo hacemos responsive
 /* MEDIA PARA DESKTOP*/
 @media screen and (min-width: 1000px) {
-.wrapper {
-
-  display: grid;
-  width: 100%;
-  grid-template-columns: 200px 150px 200px 100px;
-  grid-template-rows: auto auto auto auto;
-
-  gap: 10px;
-
-  .a {
-    background-color: #7d7d6c;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .b {
-    background-color: #505045;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .c {
-    background-color: #505045;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-  }
-
-  .d {
-    background-color: #505045;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    padding: 15px;
+  .wrapper {
 
     display: grid;
-    grid-template-columns: 150px 200px 100px;
-    grid-template-rows: auto auto;
-    gap: 10px 3px;
-    position: relative;
+    width: 100%;
+    grid-template-columns: 200px 150px 200px 100px;
+    grid-template-rows: auto auto auto auto;
 
-    > div.box {
-      border-radius: 2px;
-      font-size: 13px;
-      width: 70%;
-      height: 80%;
-      background-color: #cec8bd;
-      padding: 5px;
-    }
-
-    .e {
-      //position: absolute;
-      //z-index: 10;
-      //top: 10px
-    }
-
-    .k {
-      z-index: 10;
-    }
-
-
-  }
-
-  .n {
-    background-color: #505045;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-
-}
-
-// vamos a maquetar usando Flexbox
-
-form {
-  padding: 10px;
-
-  .wrapper {
-    border-radius: 5px;
-    width: 90%;
-    margin: 0 auto;
-    background-color: #c8c8c8;
-    padding: 10px;
-
-    display: flex;
-    flex-direction: column;
     gap: 10px;
 
-    list-style-type: none;
+    .a {
+      background-color: #7d7d6c;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
 
-    li{
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
+    .b {
+      background-color: #505045;
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
 
+    .c {
+      background-color: #505045;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
 
-      input{
+    .d {
+      background-color: #505045;
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      padding: 15px;
+
+      display: grid;
+      grid-template-columns: 150px 200px 100px;
+      grid-template-rows: auto auto;
+      gap: 10px 3px;
+      position: relative;
+
+      > div.box {
+        border-radius: 2px;
+        font-size: 13px;
         width: 70%;
-
+        height: 80%;
+        background-color: #cec8bd;
+        padding: 5px;
       }
-    }
-    li:nth-child(1){
-      input{
-        width: 85%;
 
+      .e {
+        //position: absolute;
+        //z-index: 10;
+        //top: 10px
       }
-    }
 
-    li:nth-child(2){
-      input{
-        width: 60%;
-
-
+      .k {
+        z-index: 10;
       }
+
+
     }
 
-    li:nth-child(4){
+    .n {
+      background-color: #505045;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+
+  }
+
+  // vamos a maquetar usando Flexbox
+
+  form {
+    padding: 10px;
+
+    .wrapper {
+      border-radius: 5px;
+      width: 90%;
+      margin: 0 auto;
+      background-color: #c8c8c8;
+      padding: 10px;
+
       display: flex;
-      justify-content: flex-end;
+      flex-direction: column;
+      gap: 10px;
 
-      button{
+      list-style-type: none;
 
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+
+        input {
+          width: 70%;
+
+        }
+      }
+
+      li:nth-child(1) {
+        input {
+          width: 85%;
+
+        }
+      }
+
+      li:nth-child(2) {
+        input {
+          width: 60%;
+
+
+        }
+      }
+
+      li:nth-child(4) {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+
+        }
       }
     }
   }
 }
-}
 
 
-
-// Animacion
+ //Animacion
 @keyframes cambioColor {
   from {background-color: #444444;}
   to { background-color: #CCCCCC;}
 }
 
- div.wrapper div.a{
-  background-color: red;
-   animation: cambioColor 2s infinite ;
+div.wrapper div.a {
+
+  animation: cambioColor 2s infinite;
 }
 
-div.wrapper div.b{
+div.wrapper div.b {
   animation-name: cambioColor;
   animation-duration: 1s;
   //animation-timing-function: linear;
