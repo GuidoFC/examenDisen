@@ -2,7 +2,7 @@
 export default {
     // config options
     base: "",
-    root: "./Mario/sprites/", // especificamos la carpeta donde esta nuestro index.html
+    root: "./EXAMEN_GUIDO/esquelet/css/", // especificamos la carpeta donde esta nuestro index.html
 
     server: {
         port: 8888,

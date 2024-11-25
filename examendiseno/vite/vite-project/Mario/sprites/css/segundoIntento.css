@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+/*Funciona*/
+
+
+#tuberia {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+}
+
+div#container {
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    border: 1px solid red;
+    width: 75px;
+    height: 79px;
+    overflow: hidden;
+}
+
+div#container img {
+    /*Posicion donde va acabar el Mario*/
+    object-position: -270px -557px;
+    /*El ultimo 4s es un Deley, esto quiere decir que mi animacion esperara 4s para activarse*/
+    animation: darseVuelta 4s steps(1), posicionFinal 1s steps(1) infinite 4s;
+}
+
+@keyframes darseVuelta {
+
+    0% {
+        object-position: -270px -557px;
+    }
+    33% {
+        object-position: -488px -320px;
+    }
+    66% {
+        object-position: 0px -6px;
+    }
+    100% {
+        object-position: -270px -557px;
+    }
+}
+
+
+@keyframes posicionFinal {
+    0% {
+        object-position: 0px -6px;
+    }
+}
