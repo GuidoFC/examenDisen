@@ -1,0 +1,133 @@
+
+.wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 200px 150px 200px 100px;
+  grid-template-rows: auto auto auto auto;
+
+  gap: 10px;
+
+  .a {
+    background-color: #7d7d6c;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .b {
+    background-color: #505045;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .c {
+    background-color: #505045;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .d {
+    background-color: #505045;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: 150px 200px 100px;
+    grid-template-rows: auto auto;
+    gap: 10px 3px;
+    position: relative;
+
+    > div.box {
+      border-radius: 2px;
+      font-size: 13px;
+      width: 70%;
+      height: 80%;
+      background-color: #cec8bd;
+      padding: 5px;
+    }
+
+    .e {
+      //position: absolute;
+      //z-index: 10;
+      //top: 10px
+    }
+
+    .k {
+      z-index: 10;
+    }
+
+
+  }
+
+  .n {
+    background-color: #505045;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+}
+
+// vamos a maquetar usando Flexbox
+
+form {
+  padding: 10px;
+
+  .wrapper {
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #c8c8c8;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    list-style-type: none;
+
+    li{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+
+      input{
+        width: 70%;
+
+      }
+    }
+    li:nth-child(1){
+      input{
+        width: 85%;
+
+      }
+    }
+
+    li:nth-child(2){
+      input{
+        width: 60%;
+
+
+      }
+    }
+
+    li:nth-child(4){
+      display: flex;
+      justify-content: flex-end;
+
+      button{
+
+      }
+    }
+  }
+}
