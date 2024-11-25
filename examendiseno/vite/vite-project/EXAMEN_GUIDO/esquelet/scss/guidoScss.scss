@@ -1,0 +1,68 @@
+/* EXERCICI 1 - VARIABLES (0,5 punts)
+Definiu les variables descrites a dins dels següents comentaris.
+Aquestes variables s'aniran emprant al llarg de TOT L'EXAMEN.
+*/
+/* Blau: #3498db */
+/* Blau un 20% més obscur */
+/* Blau un 15% més clar */
+/* Blau desaturat un 30% */
+
+/* Definición de variables */
+$blau: #e74c3c;
+
+/* Blau un 20% més obscur */
+$blau-obscur: adjust-color($blau, $lightness: -20%);
+
+
+/* Blau un 15% més clar */
+$Blau-clar: adjust-color($blau, $lightness: 15%);
+
+/* Blau desaturat un 30% */
+$Blau-saturat: adjust-color($blau, $saturation: -30%);
+
+/* EXERCICI 2- DEFINICIÓ DEL MIXIN (0,5 punts)
+El mixin crearà un quadrat amb una ombra. Per això ha d'acceptar
+tres valors: la mida del costat, el color de fons, i la intensitat de l'ombra.
+ */
+
+@mixin quadrat($lados, $ColorFondo, $intensitatSombra) {
+  width: ($lados * 2);
+  height: ($lados * 2);
+  background: $ColorFondo;
+  box-shadow: 0 0 10px $intensitatSombra;
+}
+
+/* Feu servir el mixin per crear un quadrat de 200px amb color #e74c3c i ombra de 20px */
+
+div.largeSquare {
+  /*Ponemos el metodo donde lo queremos aplicar*/
+  /*Avatar Guido*/
+  @include quadrat(200px, #e74c3c, rgba(0, 0, 0, 0.5))
+}
+
+
+/* EXERCICI 3 - ANIDACIÓ (0,75 punts)
+Creeu l'anidació de la següent estructura */
+
+nav#menu {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      a {
+      }
+
+      color: rgb(116.9769874477, 184.9686192469, 230.5230125523);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(25.4560669456, 96.1673640167, 143.5439330544);
+    }
+
+  }
+}
