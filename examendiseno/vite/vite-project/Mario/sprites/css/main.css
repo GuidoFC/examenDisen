@@ -46,7 +46,8 @@
     left: 80px;
     width: 70px;
     height: 80px;
-    object-fit: none;
+    border: 1px solid red;
+    overflow: hidden;
 }
 
 #container img {
@@ -55,10 +56,10 @@
     /*Quiero saber en cuanto lo tengo que dividir, en este caso en 12. pq en una fila hay 12 marios y de ancho 835 px -> 69,9px*/
     /*en una columna hay 8 marios y 639px de altura  -> 79.8*/
     /*Esta es la razon por que el widh y height tienen esa dimensión*/
-    width: 70px;
-    height: 80px;
-    object-fit: none;
-    object-position: 0 0;
+
+    /*object-position: 0 0;*/
+    /*Tengo que abrir la aplicacion paint para mirar los pixeles bien */
+    object-position: -637px -470px;
 
     /* Quiero estar en la misma fila por esto tengo 0px
      pero quiero moverme en columna multiplico 2* 69,9px y obtengo -139.8px*/
@@ -68,10 +69,10 @@
 
 
 
-    animation: salir 3s ease forwards, correr 0.5s steps(2)  infinite;
+    /*animation: salir 3s ease forwards, correr 0.5s steps(2)  infinite;*/
     /*0s: Define que la animación salir comenzará inmediatamente, sin ningún retraso*/
     /*2s: Define que la animación correr comenzará después de un retraso de 1 segundos.*/
-    animation-delay: 0s,1s;
+    /*animation-delay: 0s,1s;*/
 
     /*    Resumne: La primera animación (salir) comienza inmediatamente y dura 3 segundos con una transición suave, y el elemento mantiene el último estado de la animación.
     La segunda animación (correr) comienza 1 segundos después de que se cargue el elemento, se ejecuta en 0.5 segundos en dos pasos, y se repite infinitamente.*/
