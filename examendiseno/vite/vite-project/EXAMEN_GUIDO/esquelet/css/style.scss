@@ -1,5 +1,12 @@
+.wrapper{
 
+}
+
+// ahora lo hacemos responsive
+/* MEDIA PARA DESKTOP*/
+@media screen and (min-width: 1000px) {
 .wrapper {
+
   display: grid;
   width: 100%;
   grid-template-columns: 200px 150px 200px 100px;
@@ -131,6 +138,9 @@ form {
     }
   }
 }
+}
+
+
 
 // Animacion
 @keyframes cambioColor {
@@ -151,3 +161,6 @@ div.wrapper div.b{
   animation-iteration-count: 3;
   //animation-direction: alternate;
 }
+
+
+
